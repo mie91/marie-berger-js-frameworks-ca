@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../../constants/API";
 import Spinner from "react-bootstrap/Spinner";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -28,39 +27,39 @@ function GamesList() {
    }
 
   return (
-        <div>
-            {games.map(function(game) {
-                console.log(game);
+    <>
+      <Row>
+        {games.map(function(game) {
+          console.log(game);
 
-                const url = "/detail/" + game.id;
+          const url = "/detail/" + game.id;
 
-                return (
-                  <Container fluid="md">
-                    <Row>
-                      <Col sm={4}>
-                        <Card>
-                          <h5 className="card-title">{game.name}</h5>
-                          <div className="gameInfo">
-                            <p className="gameInfo-detail">Rating: {game.rating}</p>
-                            <p className="gameInfo-detail">Released: {game.released}</p>
-                          </div>
-                          <Image
-                            thumbnail
-                            className="gameThumbnail"
-                            src={game.background_image}
-                            alt={game.name}
-                          />
-                          <Button className="btn-primary" href={url}>
-                            View details
-                          </Button>
-                        </Card>
-                      </Col>
-                    </Row>
-                  </Container>
-                );
-            })}
-        </div>
-    );
+          return (
+                <Col sm={6} md={4}>
+                  <Card>
+                    <h5 className="card-title">{game.name}</h5>
+                    <div className="gameInfo">
+                      <p className="gameInfo-detail">Rating: {game.rating}</p>
+                      <p className="gameInfo-detail">
+                        Released: {game.released}
+                      </p>
+                    </div>
+                    <Image
+                      thumbnail
+                      className="gameThumbnail"
+                      src={game.background_image}
+                      alt={game.name}
+                    />
+                    <Button className="btn-primary" href={url}>
+                      View details
+                    </Button>
+                  </Card>
+                </Col>
+          );
+        })}
+      </Row>
+    </>
+  );
 }
 
 export default GamesList;

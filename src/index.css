@@ -21,14 +21,12 @@ code {
 
 .gameInfo {
   display: inline-flex;
-  margin: auto;
-
-  
+  margin: auto; 
 }
 
 .gameInfo-detail{
   padding: 5px;
-  background-color: rgb(106, 87, 124);
+  background-color: rgb(91, 185, 192);
   margin: 10px;
   border-radius: 10px;
 }
@@ -38,18 +36,24 @@ code {
   box-shadow: 0px 3px 16px #ccc;
   transition: all 0.4s;
   padding: 20px;
-
 }
 
 .card:hover {
-  box-shadow: 0px 3px 16px darkorchid;
+  box-shadow: 0px 3px 16px blueviolet;
 }
 
 .card-title {
-  font-size: 2em;
+  font-size: 1,2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.card .btn-primary {
+  background-color: blueviolet;
+  border: none;
+  margin: auto;
+  margin-top: 10px;
 }
 
 
