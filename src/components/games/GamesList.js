@@ -1,0 +1,66 @@
+import React, { useState, useEffect } from "react";
+import { BASE_URL } from "../../constants/API";
+import Spinner from "react-bootstrap/Spinner";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
+
+
+function GamesList() {
+    const [games, setGames] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+
+
+   useEffect(() => {
+     fetch(BASE_URL)
+       .then(response => response.json())
+       .then(json => setGames(json.results))
+       .catch(error => console.log(error))
+       .finally(() => setLoading(false));
+   }, []);
+
+   if (loading) {
+     return <Spinner animation="grow" className="spinner" />;
+   }
+
+  return (
+        <div>
+            {games.map(function(game) {
+                console.log(game);
+
+                const url = "/detail/" + game.id;
+
+                return (
+                  <Container fluid="md">
+                    <Row>
+                      <Col sm={4}>
+                        <Card>
+                          <h5 className="card-title">{game.name}</h5>
+                          <div className="gameInfo">
+                            <p className="gameInfo-detail">Rating: {game.rating}</p>
+                            <p className="gameInfo-detail">Released: {game.released}</p>
+                          </div>
+                          <Image
+                            thumbnail
+                            className="gameThumbnail"
+                            src={game.background_image}
+                            alt={game.name}
+                          />
+                          <Button className="btn-primary" href={url}>
+                            View details
+                          </Button>
+                        </Card>
+                      </Col>
+                    </Row>
+                  </Container>
+                );
+            })}
+        </div>
+    );
+}
+
+export default GamesList;

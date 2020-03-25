@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import GamesList from "../games/GamesList";
 
 export function Home() {
     return (
         <>
-        <h1>Home</h1>
+        <h1>Games</h1>
+        <GamesList></GamesList>
         </>
     );
 }

@@ -12,7 +12,49 @@ code {
     monospace;
 }
 
+/*Home Page*/
 
+.spinner {
+  margin-left: 45%;
+  margin-top: 20%;
+}
+
+.gameInfo {
+  display: inline-flex;
+  margin: auto;
+
+  
+}
+
+.gameInfo-detail{
+  padding: 5px;
+  background-color: rgb(106, 87, 124);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0px 3px 16px #ccc;
+  transition: all 0.4s;
+  padding: 20px;
+
+}
+
+.card:hover {
+  box-shadow: 0px 3px 16px darkorchid;
+}
+
+.card-title {
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/*Contact*/
 div .jumbotron {
   margin-top: 40px;
   border-radius: 60px;
@@ -23,7 +65,6 @@ div .jumbotron {
 form {
   font-size: 1.2em;
 }
-
 
 form .btn-primary {
   width: 20%;
