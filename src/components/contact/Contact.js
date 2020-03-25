@@ -4,6 +4,7 @@ import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ErrorMessage from "./ErrorMessage";
+import { Jumbotron } from "react-bootstrap";
 
 const schema = yup.object().shape({
   firstName: yup
@@ -35,48 +36,57 @@ function Contact() {
     }
 
     return (
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group>
-          <Form.Label>First Name:</Form.Label>
-          <Form.Control
-            name="firstName"
-            placeholder="First Name"
-            ref={register}
-          />
-          {errors.firstName && <ErrorMessage>{errors.firstName.message}</ErrorMessage>}
-        </Form.Group>
+      <Jumbotron>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form.Group>
+            <Form.Label>First Name:</Form.Label>
+            <Form.Control
+              name="firstName"
+              placeholder="First Name"
+              ref={register}
+            />
+            {errors.firstName && (
+              <ErrorMessage>{errors.firstName.message}</ErrorMessage>
+            )}
+          </Form.Group>
 
-        <Form.Group>
-          <Form.Label>Last Name:</Form.Label>
-          <Form.Control
-            name="lastName"
-            placeholder="Last Name"
-            ref={register}
-          />
-          {errors.lastName && <ErrorMessage>{errors.lastName.message}</ErrorMessage>}
-        </Form.Group>
+          <Form.Group>
+            <Form.Label>Last Name:</Form.Label>
+            <Form.Control
+              name="lastName"
+              placeholder="Last Name"
+              ref={register}
+            />
+            {errors.lastName && (
+              <ErrorMessage>{errors.lastName.message}</ErrorMessage>
+            )}
+          </Form.Group>
 
-        <Form.Group>
-          <Form.Label>Email:</Form.Label>
-          <Form.Control name="email" placeholder="Email" ref={register} />
-          {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-        </Form.Group>
+          <Form.Group>
+            <Form.Label>Email:</Form.Label>
+            <Form.Control name="email" placeholder="Email" ref={register} />
+            {errors.email && (
+              <ErrorMessage>{errors.email.message}</ErrorMessage>
+            )}
+          </Form.Group>
 
-        <Form.Group>
-          <Form.Label>Message:</Form.Label>
-          <Form.Control
-            as="textarea"
-            rows="3"
-            name="message"
-            placeholder="Enter your message here"
-            ref={register}
-          />
-          {errors.message && <ErrorMessage>{errors.message.message}</ErrorMessage>}
-        </Form.Group>
+          <Form.Group>
+            <Form.Label>Message:</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows="3"
+              name="message"
+              placeholder="Enter your message here"
+              ref={register}
+            />
+            {errors.message && (
+              <ErrorMessage>{errors.message.message}</ErrorMessage>
+            )}
+          </Form.Group>
 
-        <Button type="submit">Send</Button>
-
-      </Form>
+          <Button className="btn btn-lg" type="submit">Send</Button>
+        </Form>
+      </Jumbotron>
     );
 
 

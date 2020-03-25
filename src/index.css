@@ -13,3 +13,20 @@ code {
 }
 
 
+div .jumbotron {
+  margin-top: 40px;
+  border-radius: 60px;
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+form {
+  font-size: 1.2em;
+}
+
+
+form .btn-primary {
+  width: 20%;
+  background-color: blueviolet;
+  border: none;
+}
