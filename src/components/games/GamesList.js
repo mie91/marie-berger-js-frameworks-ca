@@ -32,29 +32,27 @@ function GamesList() {
         {games.map(function(game) {
           console.log(game);
 
-          const url = "/detail/" + game.id;
+          const url = "/game/" + game.id;
 
           return (
-                <Col sm={6} md={4}>
-                  <Card>
-                    <h5 className="card-title">{game.name}</h5>
-                    <div className="gameInfo">
-                      <p className="gameInfo-detail">Rating: {game.rating}</p>
-                      <p className="gameInfo-detail">
-                        Released: {game.released}
-                      </p>
-                    </div>
-                    <Image
-                      thumbnail
-                      className="gameThumbnail"
-                      src={game.background_image}
-                      alt={game.name}
-                    />
-                    <Button className="btn-primary" href={url}>
-                      View details
-                    </Button>
-                  </Card>
-                </Col>
+            <Col sm={6} md={4} key={game.id}>
+              <Card>
+                <h5 className="card-title">{game.name}</h5>
+                <div className="gameInfo">
+                  <p className="gameInfo-detail">Rating: {game.rating}</p>
+                  <p className="gameInfo-detail">Released: {game.released}</p>
+                </div>
+                <Image
+                  thumbnail
+                  className="gameThumbnail"
+                  src={game.background_image}
+                  alt={game.name}
+                />
+                <Button className="btn-primary" href={url}>
+                  View details
+                </Button>
+              </Card>
+            </Col>
           );
         })}
       </Row>

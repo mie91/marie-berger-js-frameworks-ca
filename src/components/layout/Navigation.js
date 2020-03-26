@@ -10,6 +10,7 @@ import {
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
 import Contact from "../contact/Contact";
+import GameDetail from "../games/GameDetail";
 
 function Navigation() {
     return (
@@ -32,8 +33,9 @@ function Navigation() {
         </Navbar>
         <Container>
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/" exact component={Home}/>
+            <Route path="/contact" component={Contact}/>
+            <Route path="/details/:id" component={GameDetail} />
           </Switch>
         </Container>
       </Router>
