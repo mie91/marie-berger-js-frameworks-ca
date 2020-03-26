@@ -1,19 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {Card, Button, Image} from "react-bootstrap";
+import {Card, Image} from "react-bootstrap";
 import PropTypes from "prop-types";
 
-function GameItem ({id, name, rating, released, background_image}) {
+function GameItem ({name, rating, released, background_image}) {
     return (
 
-        <Card>
-            <Card.Img variant="top" src={background_image} />
+        <>
+            <Image src={background_image} fluid/>
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
+                <div className="gameInfo-detail">
                 <Card.Text><b>Rating: </b>{rating}</Card.Text>
-                <Card.Text><b>Release Date: </b>{released}</Card.Text>
+                <Card.Text><b>Released: </b>{released}</Card.Text>
+                </div>
             </Card.Body>
-        </Card>
+        </>
 
     );
     
@@ -23,7 +24,7 @@ GameItem.propTypes = {
         name: PropTypes.string.isRequired,
         background_image: PropTypes.string.isRequired,
         rating: PropTypes.number.isRequired,
-        released: PropTypes.number.isRequired
+        released: PropTypes.string.isRequired
 };
 
 export default GameItem;

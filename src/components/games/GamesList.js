@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../../constants/API";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Spinner from "react-bootstrap/Spinner";
+import {Row, Col, Button, Spinner, Card} from "react-bootstrap";
 import GameItem from "./GameItem";
 import Search from "./Search";
 
@@ -59,9 +56,11 @@ const [loading, setLoading] = useState(true);
               const href = "games/" + game.id;
 
                return (
-                        <Col sm={6} md={3} key={name}>
+                        <Col sm={4} md={4} key={name}>
+                          <Card>
                             <GameItem name={name} background_image={background_image} rating={rating} released={released} />
-                            <Button variant="secondary" href={href} block >Details</Button>
+                            <Button className="btn-primary" href={href} block >Details</Button>
+                            </Card>
                         </Col>
                     );
           })}

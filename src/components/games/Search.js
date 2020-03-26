@@ -6,7 +6,7 @@ import FormControl from "react-bootstrap/FormControl";
 export default function Search({ handleSearch }) {
     return (
         <>
-        <h1 className="Header">Games Overview</h1>
+        <h1 className="mainHeader">Games Overview</h1>
         <InputGroup className="search">
             <FormControl
                 placeholder="Search by name..."

@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 import { BASE_URL } from "../../constants/API";
+import {Row, Col, Button, Image, Spinner} from "react-bootstrap";
 
 
 function GameDetail() {
@@ -39,17 +36,18 @@ function GameDetail() {
 
         <Col>
           <h1>{detail.name}</h1>
-          <p>
-            <b>Description: </b> <div dangerouslySetInnerHTML={{ __html: detail.description }} />
-          </p>
-          <p>
-            <b>Website: </b><a href={detail.website}>Click here </a>
-          </p>
+          <div>
+            <h2>Description: </h2> <div dangerouslySetInnerHTML={{ __html: detail.description }} />
+          </div>
+          <Button>
+            <a href={detail.website}>More Information</a>
+          </Button>
         </Col>
       </Row>
     </>
   );
 }
+
 
 export default GameDetail
 
