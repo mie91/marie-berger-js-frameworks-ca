@@ -1,4 +1,46 @@
-import React, { useEffect, useState } from "react";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/API";
 
@@ -33,3 +75,5 @@ function GameDetail() {
 }
 
 export default GameDetail;
+
+*/

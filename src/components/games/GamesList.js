@@ -1,5 +1,91 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../../constants/API";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Spinner from "react-bootstrap/Spinner";
+
+function GamesList() {
+const [games, setGames] = useState([]);
+const [loading, setLoading] = useState(true);
+
+
+  useEffect(() => {
+    fetch(BASE_URL)
+      .then(response => response.json())
+      .then(json => setGames(json.results))
+      .catch(error => console.log(error))
+      .finally(() => setLoading(false));
+  }, []);
+
+    if (loading) {
+        return <Spinner animation="grow" className="spinner" />;
+    }
+
+  return (
+    <Row>
+      {games.map(game => (
+        <Col sm={4}>
+          <Card>
+            <p key={game.id}>{game.name}</p>
+            <p>{game.rating}</p>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  )
+}
+
+export default GamesList;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { useState, useEffect } from "react";
+import { BASE_URL } from "../../constants/API";
 import Spinner from "react-bootstrap/Spinner";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
@@ -61,3 +147,5 @@ function GamesList() {
 }
 
 export default GamesList;
+
+*/
