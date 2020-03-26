@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+#root {
+  background-color: rgb(17, 16, 16);
+}
+
 /*Home Page*/
 
 .spinner {
@@ -26,21 +30,21 @@ code {
 
 .gameInfo-detail{
   padding: 5px;
-  background-color: rgb(91, 185, 192);
+  background-color: rgb(36, 158, 167);
   margin: 10px;
   border-radius: 10px;
 }
 
-.card {
+div .card {
   margin-bottom: 30px;
-  box-shadow: 0px 3px 16px #ccc;
-  transition: all 0.4s;
+  box-shadow: 0px 3px 16px black;
+  transition: all 0.2s;
   padding: 20px;
   height: 500px;
 }
 
 .card:hover {
-  box-shadow: 0px 3px 16px blueviolet;
+  box-shadow: 0px 3px 16px #ccc;
 }
 
 .card-title {
@@ -52,7 +56,7 @@ code {
 }
 
 .card .btn-primary {
-  background-color: blueviolet;
+  background-color: rgb(75, 21, 126);
   border: none;
   margin: auto;
   margin-top: 10px;
@@ -74,6 +78,6 @@ form {
 
 form .btn-primary {
   width: 20%;
-  background-color: blueviolet;
+  background-color: rgb(75, 21, 126);
   border: none;
 }
