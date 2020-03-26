@@ -9,9 +9,9 @@ function GameItem ({name, rating, released, background_image}) {
             <Image src={background_image} fluid/>
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
-                <div className="gameInfo-detail">
-                <Card.Text><b>Rating: </b>{rating}</Card.Text>
-                <Card.Text><b>Released: </b>{released}</Card.Text>
+                <div className="gameInfo">
+                <p className="gameInfo-detail"><b>Rating:</b> {rating}</p>
+                <p className="gameInfo-detail"><b>Released: </b>{released}</p>
                 </div>
             </Card.Body>
         </>

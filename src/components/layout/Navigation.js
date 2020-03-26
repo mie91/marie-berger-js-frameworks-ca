@@ -15,9 +15,9 @@ import GameDetail from "../games/GameDetail";
 function Navigation() {
     return (
       <Router>
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar variant="dark" expand="lg">
           <NavLink to="/" exact>
-            <Navbar.Brand>RAWG Video Games Database</Navbar.Brand>
+            <Navbar.Brand>RAWG </Navbar.Brand>
           </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
