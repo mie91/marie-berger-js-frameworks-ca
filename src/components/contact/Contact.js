@@ -36,6 +36,8 @@ function Contact() {
     }
 
     return (
+      <>
+      <h1 className="Header">Contact</h1>
       <Jumbotron>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group>
@@ -87,6 +89,7 @@ function Contact() {
           <Button className="btn btn-lg" type="submit">Send</Button>
         </Form>
       </Jumbotron>
+      </>
     );
 
 

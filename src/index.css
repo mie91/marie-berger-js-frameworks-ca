@@ -14,33 +14,36 @@ code {
 
 #root {
   background-color: rgb(17, 16, 16);
+  height: 100%;
 }
 
 /*Home Page*/
+.search {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 
 .spinner {
   margin-left: 45%;
   margin-top: 20%;
 }
 
-.gameInfo {
-  display: inline-flex;
-  margin: auto; 
-}
 
 .gameInfo-detail{
   padding: 5px;
   background-color: rgb(36, 158, 167);
   margin: 10px;
   border-radius: 10px;
+  text-align: center;
 }
 
-div .card {
+div.card {
   margin-bottom: 30px;
-  box-shadow: 0px 3px 16px black;
+  box-shadow: 0px 3px 16px rgb(75, 21, 126);
   transition: all 0.2s;
   padding: 20px;
-  height: 500px;
+  height: 420px;
 }
 
 .card:hover {
@@ -48,18 +51,13 @@ div .card {
 }
 
 .card-title {
-  font-size: 1,2em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1.5em;
   text-align: center;
 }
 
 .card .btn-primary {
   background-color: rgb(75, 21, 126);
   border: none;
-  margin: auto;
-  margin-top: 10px;
 }
 
 

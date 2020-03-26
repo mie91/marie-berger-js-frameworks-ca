@@ -35,7 +35,7 @@ function Navigation() {
           <Switch>
             <Route path="/" exact component={Home}/>
             <Route path="/contact" component={Contact}/>
-            <Route path="/details/:id" component={GameDetail} />
+            <Route path="/games/:id" component={GameDetail} />
           </Switch>
         </Container>
       </Router>
