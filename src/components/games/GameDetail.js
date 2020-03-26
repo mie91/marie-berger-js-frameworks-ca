@@ -8,6 +8,7 @@ function GameDetail() {
   const [detail, setDetail] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
   let {id} = useParams();
 
   const url = BASE_URL + "/" + id;
@@ -21,12 +22,14 @@ function GameDetail() {
       })
       .catch(error => console.log(error))
       .finally(() => setLoading(false));
-  }, []);
+  }, [url]);
 
   if (loading) {
-    return <Spinner animation="grow" className="spinner" />;
+    return <Spinner animation="grow" variant="light" className="spinner" />;
   }
 
+ 
+ 
   return (
     <div className="detailBox">
     <h1 className="mainHeader">{detail.name}</h1>
@@ -39,12 +42,16 @@ function GameDetail() {
           <div>
             <h2 className="subHeader">Description </h2> <div className="gameDesc" dangerouslySetInnerHTML={{ __html: detail.description }}/>
           </div>
+
           <Button className="btn-primary" href={detail.website}>More Info
           </Button>
+          
         </Col>
       </Row>
     </div>
   );
+
+  
 }
 
 

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: auto;
 }
 
 code {
@@ -46,11 +47,12 @@ span.navbar-brand {
 .detailBox {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 2em;
-  border-left: solid 1px #74d4dd;
-  border-right: solid 1px #74d4dd;
-  padding-bottom: 8em;
+  border-left: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  padding-bottom: 11em;
 
 }
+
 
 /*Home Page*/
 
@@ -175,7 +177,6 @@ div.card {
   letter-spacing: 0.1em;
   font-weight: 500;
   box-shadow: 0px 5px 10px 1px black;
-  margin-bottom: 5em;
 
 }
 
@@ -198,10 +199,11 @@ div.card {
 .formBox {
   font-size: 1.2em;
   letter-spacing: 0.1em;
-  border: solid 1px #74d4dd;
+  border-top: solid 1px #ffffff;
+  border-bottom: solid 1px #ffffff;
   padding: 2em;
   margin-top: 2em;
-  color: #74d4dd;
+  color: #ffffff;
 }
 
 
