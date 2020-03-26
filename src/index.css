@@ -13,9 +13,15 @@ code {
 }
 
 #root {
-  background: #360033;
+  /*background: #360033;
   background: -webkit-linear-gradient(to right, #0b8793, #360033);
   background: linear-gradient(to right, #0b8793, #360033);
+
+  */
+
+  background: #3a6186;
+  background: -webkit-linear-gradient(to top, #89253e, #3a6186);
+  background: linear-gradient(to top, #89253e, #3a6186);
 
 
 
@@ -24,13 +30,26 @@ code {
 .navbar {
   border-top: solid white 1px;
   border-bottom: solid white 1px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
+
 
 span.navbar-brand {
   font-size: 2em;
   letter-spacing: 0.2em;
   border-right: solid white 1px;
   margin-right: 1em;
+}
+
+.detailBox {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2em;
+  border-left: solid 1px #74d4dd;
+  border-right: solid 1px #74d4dd;
+  padding-bottom: 8em;
+
 }
 
 /*Home Page*/
@@ -49,6 +68,14 @@ div.search {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   text-align: center;
+}
+
+.subHeader {
+  margin-top: 0.7em;
+  color: #74d4dd;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.8em;
 }
 
 .search {
@@ -107,7 +134,12 @@ div.card {
   background-color: transparent;
   border: solid 1px #74d4dd;
   box-shadow: 0px 5px 10px 1px #74d4dd;
-  ;
+}
+
+.card .btn-primary:not(:disabled):not(.disabled):active {
+  background-color: transparent;
+  border: solid 1px #74d4dd;
+  box-shadow: 0px 5px 10px 1px black;
 }
 
 
@@ -117,22 +149,68 @@ div.card {
 
 }
 
+/*Game Details*/
+
+
+.detail-image {
+  margin-top: 2em;
+}
+.detail-image img {
+  max-width: 100%;
+  box-shadow: 0px 5px 10px 1px black;
+  border: solid 1px #74d4dd;
+}
+
+.gameDesc p {
+  color: #f1f1f1;
+  
+}
+
+
+.detailBox .btn-primary {
+  background-color: #74d4dd;
+  border: solid 1px #74d4dd;
+  color: #073438;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  box-shadow: 0px 5px 10px 1px black;
+  margin-bottom: 5em;
+
+}
+
+.detailBox .btn-primary:hover {
+  background-color: transparent;
+  border: solid 1px #74d4dd;
+  box-shadow: 0px 5px 10px 1px #74d4dd;
+}
+
+.detailBox .btn-primary:not(:disabled):not(.disabled):active {
+  background-color: transparent;
+  border: solid 1px #74d4dd;
+  box-shadow: 0px 5px 10px 1px black;
+}
+
+
 
 
 /*Contact*/
-div .jumbotron {
-  margin-top: 40px;
-  border-radius: 60px;
-  background-color: rgb(32, 32, 32);
-  color: white;
-}
-
-form {
+.formBox {
   font-size: 1.2em;
+  letter-spacing: 0.1em;
+  border: solid 1px #74d4dd;
+  padding: 2em;
+  margin-top: 2em;
+  color: #74d4dd;
 }
 
-form .btn-primary {
-  width: 20%;
-  background-color: rgb(75, 21, 126);
-  border: none;
+
+
+
+.errorMessage {
+  color: #f84c77;
+  text-align: center;
+  letter-spacing: 0.2em;
+  border-bottom: solid 1px #f84c77;
+  margin-top: 0.2em;
 }

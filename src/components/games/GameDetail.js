@@ -28,23 +28,22 @@ function GameDetail() {
   }
 
   return (
-    <>
-      <Col md={6} className="detail-image">
+    <div className="detailBox">
+    <h1 className="mainHeader">{detail.name}</h1>
+      <div className="detail-image">
         <Image src={detail.background_image} />
-      </Col>
+      </div>
       <Row>
 
         <Col>
-          <h1>{detail.name}</h1>
           <div>
-            <h2>Description: </h2> <div dangerouslySetInnerHTML={{ __html: detail.description }} />
+            <h2 className="subHeader">Description </h2> <div className="gameDesc" dangerouslySetInnerHTML={{ __html: detail.description }}/>
           </div>
-          <Button>
-            <a href={detail.website}>More Information</a>
+          <Button className="btn-primary" href={detail.website}>More Info
           </Button>
         </Col>
       </Row>
-    </>
+    </div>
   );
 }
 

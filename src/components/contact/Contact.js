@@ -4,7 +4,6 @@ import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ErrorMessage from "./ErrorMessage";
-import { Jumbotron } from "react-bootstrap";
 
 const schema = yup.object().shape({
   firstName: yup
@@ -36,9 +35,9 @@ function Contact() {
     }
 
     return (
-      <>
+      <div className="detailBox">
       <h1 className="mainHeader">Contact</h1>
-      <Jumbotron>
+      <div className="formBox">
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group>
             <Form.Label>First Name:</Form.Label>
@@ -88,8 +87,8 @@ function Contact() {
 
           <Button className="btn btn-lg" type="submit">Send</Button>
         </Form>
-      </Jumbotron>
-      </>
+      </div>
+      </div>
     );
 
 
