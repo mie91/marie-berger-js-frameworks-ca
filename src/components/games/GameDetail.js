@@ -30,13 +30,15 @@ function GameDetail() {
 
   return (
     <div className="detailBox">
-    <h1 className="mainHeader">{detail.name}</h1>
-      <div className="detail-image">
-        <Image src={detail.background_image} />
-      </div>
-      <Row>
+      <h1 className="mainHeader">{detail.name}</h1>
 
+        <div className="detail-image">
+          <Image src={detail.background_image} />
+        </div>
+
+      <Row>
         <Col>
+
           <div>
             <h2 className="subHeader">Description </h2> <div className="gameDesc" dangerouslySetInnerHTML={{ __html: detail.description }}/>
           </div>
@@ -49,7 +51,6 @@ function GameDetail() {
     </div>
   );
 }
-
 
 export default GameDetail
 

@@ -9,7 +9,6 @@ const [games, setGames] = useState([]);
 const [filteredGames, setFilteredGames] = useState([]);
 const [loading, setLoading] = useState(true);
 
-
   useEffect(() => {
     fetch(BASE_URL)
       .then(response => response.json())
@@ -22,29 +21,23 @@ const [loading, setLoading] = useState(true);
   }, []);
 
     const filterCards = function(e) {
-		// Let's get the value the user typed in and make it lower case:
 		const searchValue = e.target.value.toLowerCase();
 
-		// create a new array from the characters array
-		const filteredArray = games.filter(function(char) {
-			// make each name lowercase so we can check it properly with the search value
-			const lowerCaseName = char.name.toLowerCase();
+		const filteredArray = games.filter(function(gam) {
+			const lowerCaseName = gam.name.toLowerCase();
 
-			// check if the character name begins with the search value using the startsWith method
 			if (lowerCaseName.startsWith(searchValue)) {
-				// if it does, return true
-				// this will add it to the new filtered array
+
 				return true;
 			}
 			return false;
 		});
 
-		// set filtered characters to the new array
 		setFilteredGames(filteredArray);
 	};
 
 	if (loading) {
-		return <Spinner animation="grow" variant="light"className="spinner" />;
+		return <Spinner animation="grow" variant="light"className="spinner"/>;
 	}
 
     return (
@@ -59,8 +52,8 @@ const [loading, setLoading] = useState(true);
                         <Col sm={4} md={4} key={name}>
                           <Card>
                             <GameItem name={name} background_image={background_image} rating={rating} released={released} />
-                            <Button className="btn-primary" href={href} block >Details</Button>
-                            </Card>
+                            <Button className="btn-primary" href={href} block >More Details</Button>
+                          </Card>
                         </Col>
                     );
           })}
