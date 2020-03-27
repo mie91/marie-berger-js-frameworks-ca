@@ -1,0 +1,42 @@
+//------GAME DETAILS IMAGE-----
+.detail-image {
+    margin-top: 4vh;
+}
+
+.detail-image img {
+    max-width: 100%;
+    box-shadow: 0px 5px 10px 1px black;
+    border: $thinBorderBlue;
+}
+
+//------GAME DETAILS CONTENT----
+.gameDesc p {
+    color: #f1f1f1;
+}
+
+
+//------GAME DETAILS BUTTON-----
+
+
+.detailBox .btn-primary {
+    background-color: $babyBlue;
+    border: $thinBorderBlue;
+    color: $teal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    box-shadow: 0px 5px 10px 1px black;
+}
+
+.detailBox .btn-primary:hover {
+    background-color: transparent;
+    border: $thinBorderBlue;
+    box-shadow: 0px 5px 10px 1px $babyBlue;
+    color: $babyBlue;
+}
+
+.detailBox .btn-primary:not(:disabled):not(.disabled):active {
+    background-color: transparent;
+    border: $thinBorderBlue;
+    box-shadow: 0px 5px 10px 1px black;
+}

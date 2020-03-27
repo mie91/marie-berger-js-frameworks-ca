@@ -1,0 +1,77 @@
+ //------Background color-----
+
+#root {
+  
+    background: $gradientBlue;
+    background: -webkit-linear-gradient(to top, $gradientRed, $gradientBlue);
+    background: linear-gradient(to top, $gradientRed, $gradientBlue);
+}
+
+
+//------Textbox background color-----
+.detailBox {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    border-left: solid 1px #ffffff;
+    border-right: solid 1px #ffffff;
+}
+
+
+  /*
+  ------Background color alternative-----
+  background: #360033;
+  background: -webkit-linear-gradient(to right, #0b8793, #360033);
+  background: linear-gradient(to right, #0b8793, #360033);
+
+  */
+
+  //------HEADERS ETC.-----
+
+  .mainHeader {
+      margin-top: 2vh;
+      color: $babyBlue;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      text-align: center;
+  }
+
+  .subHeader {
+      margin-top: 2vh;
+      color: $babyBlue;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 1.8em;
+  }
+
+  //------MISC. STUFF-----
+  .spinner {
+      margin-left: 45%;
+      margin-top: 20%;
+  }
+
+
+  //------ DETAILS BUTTON-----
+
+
+  .detailBox .btn-primary {
+      background-color: $babyBlue;
+      border: $thinBorderBlue;
+      color: $teal;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      box-shadow: 0px 5px 10px 1px black;
+  }
+
+  .detailBox .btn-primary:hover {
+      background-color: transparent;
+      border: $thinBorderBlue;
+      box-shadow: 0px 5px 10px 1px $babyBlue;
+      color: $babyBlue;
+  }
+
+  .detailBox .btn-primary:not(:disabled):not(.disabled):active {
+      background-color: transparent;
+      border: $thinBorderBlue;
+      box-shadow: 0px 5px 10px 1px black;
+  }

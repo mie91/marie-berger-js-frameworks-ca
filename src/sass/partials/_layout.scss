@@ -1,0 +1,41 @@
+
+ //------NAVIGATION BAR----- //
+
+.navbar {
+    border-top: $thinBorderWhite;
+    border-bottom: $thinBorderWhite;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+span.navbar-brand {
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    border-right: $thinBorderWhite;
+    margin-right: 1vh;
+}
+
+
+ //------FOOTER----- //
+footer {
+    text-align: center;
+    padding: 4vh;
+    color: $brightPink;
+    border-top: $thinBorderWhite;
+    border-bottom: $thinBorderWhite;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+}
+
+.footerLink {
+    color: $brightPink;
+    text-decoration: underline;
+}
+
+.footerLink:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+

@@ -1,0 +1,22 @@
+//---------Contact Form--------------//
+.formBox {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    border-top: $thinBorderWhite;
+    border-bottom: $thinBorderWhite;
+    padding: 4vh;
+    margin-top: 4vh;
+    color: #ffffff;
+    margin-bottom: 10vh;
+}
+
+
+//---------ERROR message--------------//
+
+.errorMessage {
+    color: $deepPink;
+    text-align: center;
+    letter-spacing: 0.2em;
+    border-bottom: solid 1px $deepPink;
+    margin-top: 1vh;
+}
