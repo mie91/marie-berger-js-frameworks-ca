@@ -19,14 +19,11 @@ code {
   background: linear-gradient(to right, #0b8793, #360033);
 
   */
-
   background: #3a6186;
   background: -webkit-linear-gradient(to top, #89253e, #3a6186);
   background: linear-gradient(to top, #89253e, #3a6186);
-
-
-
 }
+
 
 .navbar {
   border-top: solid white 1px;
@@ -34,6 +31,27 @@ code {
   font-size: 1.1em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+footer {
+  text-align: center;
+  padding: 4em;
+  color: #f17c99;
+  border-top: solid white 1px;
+  border-bottom: solid white 1px;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  
+}
+
+.footerLink {
+  color: #f17c99;
+  text-decoration: underline;
+}
+
+.footerLink:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 
@@ -49,8 +67,6 @@ span.navbar-brand {
   padding: 2em;
   border-left: solid 1px #ffffff;
   border-right: solid 1px #ffffff;
-  padding-bottom: 11em;
-
 }
 
 
@@ -204,6 +220,7 @@ div.card {
   padding: 2em;
   margin-top: 2em;
   color: #ffffff;
+  margin-bottom: 5em;
 }
 
 

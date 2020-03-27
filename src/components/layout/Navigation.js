@@ -14,6 +14,7 @@ import GameDetail from "../games/GameDetail";
 
 function Navigation() {
     return (
+      <>
       <Router>
         <Navbar variant="dark" expand="lg">
           <NavLink to="/" exact>
@@ -39,6 +40,13 @@ function Navigation() {
           </Switch>
         </Container>
       </Router>
+
+      <footer>
+        
+        <a href="/userhttps://rawg.io/apidocss/123" className="footerLink">API from RAWG Video Games Database</a>
+        <p>By: Marie Helen Berger</p>
+      </footer>
+      </>
     );
 }
 
